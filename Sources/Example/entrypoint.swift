@@ -1,9 +1,9 @@
 import Vapor
 
-import MyServiceAPIClient
 import HTTPBingoClient
 import PostmanEchoClient
 
+import MyServiceAPIClient
 import MyServiceUserAPIServer
 import MyServiceStoreAPIServer
 

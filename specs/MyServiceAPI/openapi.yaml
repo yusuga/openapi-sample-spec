@@ -3,14 +3,19 @@ info:
   title: My Service
   version: "1.0.0"
 servers:
-  - url: https://httpbingo.org
+  - url: http://localhost:{port}
+    description: local
+    variables:
+      port:
+        default: '8080'
+        description: The port number the server is running on
 tags:
   - name: user
   - name: store
 paths:
   /user/get:
     get:
-      summary: GET method for /get endpoint
+      summary: GET User
       tags:
         - user
       responses:
@@ -19,10 +24,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetResponse'
+                $ref: '#/components/schemas/User'
   /store/get:
     get:
-      summary: GET method for /get endpoint
+      summary: GET Store
       tags:
         - store
       responses:
@@ -31,14 +36,20 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetResponse'
+                $ref: '#/components/schemas/Store'
 components:
   schemas:
-    GetResponse:
+    User:
       type: object
       properties:
-        method:
-          type: string
-          example: "GET"
         name:
           type: string
+      required:
+        - name
+    Store:
+      type: object
+      properties:
+        name:
+          type: string
+      required:
+        - name

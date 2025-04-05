@@ -23,3 +23,5 @@ components:
         url:
           type: string
           example: "https://httpbingo.org/get"
+      required:
+        - url

@@ -23,3 +23,5 @@ components:
         url:
           type: string
           example: "https://postman-echo.com/get"
+      required:
+        - url
