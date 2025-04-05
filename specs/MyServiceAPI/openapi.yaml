@@ -13,7 +13,7 @@ tags:
   - name: user
   - name: store
 paths:
-  /user/get:
+  /user:
     get:
       summary: GET User
       tags:
@@ -25,7 +25,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User'
-  /store/get:
+  /store:
     get:
       summary: GET Store
       tags:
