@@ -1,0 +1,8 @@
+accessModifier: public
+namingStrategy: idiomatic
+generate:
+  - types
+  - server
+filter:
+  tags:
+    - store

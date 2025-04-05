@@ -1,0 +1,5 @@
+accessModifier: public
+namingStrategy: idiomatic
+generate:
+  - types
+  - client

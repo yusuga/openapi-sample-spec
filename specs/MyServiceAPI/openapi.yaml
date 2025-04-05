@@ -1,0 +1,44 @@
+openapi: 3.1.0
+info:
+  title: My Service
+  version: "1.0.0"
+servers:
+  - url: https://httpbingo.org
+tags:
+  - name: user
+  - name: store
+paths:
+  /user/get:
+    get:
+      summary: GET method for /get endpoint
+      tags:
+        - user
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetResponse'
+  /store/get:
+    get:
+      summary: GET method for /get endpoint
+      tags:
+        - store
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetResponse'
+components:
+  schemas:
+    GetResponse:
+      type: object
+      properties:
+        method:
+          type: string
+          example: "GET"
+        name:
+          type: string
